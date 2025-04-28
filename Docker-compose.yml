@@ -1,0 +1,14 @@
+version: '3.7'
+
+services:
+  app:
+    build: .
+    container_name: yii2-app
+    volumes:
+      - .:/var/www/html
+    networks:
+      - yii2-network
+
+networks:
+  yii2-network:
+    driver: bridge
